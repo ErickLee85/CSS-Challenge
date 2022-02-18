@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            
+        }
+
+        .parent {
+            margin: auto;
+            height: 500px;
+            width: 500px;
+            border: 2px solid white;
+        }
+        .child {
+            height: 50%;
+            width: 50%;
+            background-color: aqua;
+            transition: transform 1s ease-in-out;
+        }
+
+        .parent:hover .child {
+            animation: left-to-right 1s ease-in forwards infinite alternate;
+            border: 3px solid yellow;
+            
+        }
+
+        @keyframes left-to-right {
+            0% {
+                transform: translateX(0) rotate(90deg);
+            }
+            33% {
+                transform: translateY(100%) rotate(180deg);
+                background-color: blue;
+                opacity: .5;
+             }
+             66% {
+                transform: translateX(100%) translateY(100%) rotate(270deg);
+                background-color: blueviolet;
+                }
+            
+            100% {
+                transform: translateX(100%) rotate(360deg);
+                background-color: hotpink;          
+            }
+        }
+    </style>
+<body>
+    <h1> Playful CSS</h1>
+    <div class="parent">
+        <div class="child">
+        </div>
+</body>
+</html>
